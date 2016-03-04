@@ -57,7 +57,7 @@
 <blockquote>
 <p>解释：每个点或者向量使用极坐标表示的话需要3个参数$\rho,\theta,\phi$,而这里由于是单位向量，因此长度为1，故使用2个参数就可以描述。</p>
 </blockquote>
-<p>故对于各向同性的BRDF（将l和v沿着法线n旋转，BRDF保持不变）需要3个参数（$\theta_i,\theta_o,\phi$,$phi是\vec l 和 \vec v 投影的夹角$）;<br>对于各向异性的BRDF，需要5个参数（$\theta_i,\theta_o,\phi,\phi_i,\phi_o$）。<br><img src="/./1456405729101.png" alt="Alt text"></p>
+<p>故对于各向同性的BRDF（将l和v沿着法线n旋转，BRDF保持不变）需要3个参数（$\theta_i,\theta_o,\phi$,$phi是\vec l 和 \vec v 投影的夹角$）;<br>对于各向异性的BRDF，需要5个参数（$\theta_i,\theta_o,\phi,\phi_i,\phi_o$）。<br><img src="/../../../../img/1456405729101.png" alt="Alt text"></p>
 <p>实践中，计算给定BRDF需要的参数从1个到5个不等，常见的一些角见Figure 19：<br><img src="/./1456405781843.png" alt="Alt text"></p>
 <p>原则上讲，BRDF要求light和view都在表面上方（BRDF仅仅处理表面的反射，透射依靠BTDF来描述或者BSDF（包含BRDF和BTDF）），也就是说，$\vec n \cdot \vec l 和 \vec n \cdot \vec v$ 都必须大于0。</p>
 <p>避免背向表面（指出射光和入射光不在平面一侧）的光的方法：仅考虑正向的入射光或者将背向光的贡献值设置为0。 理论上，背向光是不可能发生的，但是，由于顶点处法线会进行插值和法线映射（游戏中），这样就会导致背向光的发生。<br>简单的，可以将$\vec n \cdot \vec v$ 截取到0（若为负值的话）。</p>
