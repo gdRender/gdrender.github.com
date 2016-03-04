@@ -40,23 +40,54 @@
   <article class="post">
     <header class="post-header">
       <span class="post-meta">
-      <time datetime="2016-01-17T08:46:49.491Z" itemprop="datePublished">
-          2016-01-17
+      <time datetime="2016-03-04T04:15:33.000Z" itemprop="datePublished">
+          2016-03-04
       </time>
     
 </span>
-      <h2 class="post-title"><a href="/2016/01/17/hello-world/">Hello World</a></h2>
+      <h2 class="post-title"><a href="/2016/03/04/BSDF数学/">BSDF数学</a></h2>
     </header>
     <section class="post-excerpt">
       <p>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new p
+        ##着色有关的数学
+一般我们采用辐射度学来度量电磁波的辐射情况。
+存在很多的辐射有关的物理量用来描述表面上各个方向的光。
+我们仅仅考虑radiance这个物理量，radiance用来确定单一光线的大小。我们使用L来表示radiance，$L_i$表示表面入射光的radiance， $L_o$用来表示表面出射光的radiance。
+Radiance是一个光谱量，也就是说radiance是波长的函数。理论上讲，为了表示可见光的radianc
       
       </p>
       
       <p>
-          <a href="/2016/01/17/hello-world/" class="excerpt-link">Read More...</a>
+          <a href="/2016/03/04/BSDF数学/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-03-04T04:12:48.000Z" itemprop="datePublished">
+          2016-03-04
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/03/04/BSDF物理/">BSDF物理</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        着色有关的物理着色与光和物体相互作用发生的物理现象有关。为了更好的理解这些现象，需要先对光进行基本了解。
+
+光是电磁波，并且是横波（传播方向和振动方向垂直）。 光可以依靠波长来区分，光波长涉及的范围很广，但其中可见光大约是400-700 nm的狭小范围，只有这部分的光对着色有影响。
+
+折射率（refractive index）是一个复数，实数部分表示介质对光传播速度的影响，虚数部分决定光是否会被吸收（转变为其它能量）。折射率是波长的函数
+      
+      </p>
+      
+      <p>
+          <a href="/2016/03/04/BSDF物理/" class="excerpt-link">Read More...</a>
       </p>
       
     </section>
