@@ -1,123 +1,662 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
+
+
+  
+
+
+<html class="theme-next muse use-motion">
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>gdRender</title>
-  <meta name="description" content="Record learning notes here." />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
 
-  <meta name="generator" content="gdRender">
 
-  
-  
-  
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="gdRender">
+<meta property="og:url" content="https://gdRender.github.io/index.html">
+<meta property="og:site_name" content="gdRender">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gdRender">
+<meta name="twitter:description">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> gdRender </title>
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<body class="home-template">
+  
 
-  <header class="site-head"  style="background-image: url(//blog.ghost.org/content/images/2013/Nov/cover.png)" >
-    <div class="vertical">
-        <div class="site-head-content inner">
-             <a class="blog-logo" href="/"><img src="http://7xi9ka.com1.z0.glb.clouddn.com/01300000171118127867971783831.jpg" alt="Blog Logo"/></a> 
-            <h1 class="blog-title">gdRender</h1>
-            <h2 class="blog-description">Record learning notes here.</h2>
-        </div>
-    </div>
-</header>
+
+
+
+
+
+
+
+
+
   
-<main class="content" role="main">
   
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-03-04T04:15:33.000Z" itemprop="datePublished">
-          2016-03-04
-      </time>
     
-</span>
-      <h2 class="post-title"><a href="/2016/03/04/BSDF数学/">BSDF数学</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        ##着色有关的数学
-一般我们采用辐射度学来度量电磁波的辐射情况。
-存在很多的辐射有关的物理量用来描述表面上各个方向的光。
-我们仅仅考虑radiance这个物理量，radiance用来确定单一光线的大小。我们使用L来表示radiance，$L_i$表示表面入射光的radiance， $L_o$用来表示表面出射光的radiance。
-Radiance是一个光谱量，也就是说radiance是波长的函数。理论上讲，为了表示可见光的radianc
-      
-      </p>
-      
-      <p>
-          <a href="/2016/03/04/BSDF数学/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
   
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-03-04T04:12:48.000Z" itemprop="datePublished">
-          2016-03-04
-      </time>
-    
-</span>
-      <h2 class="post-title"><a href="/2016/03/04/BSDF物理/">BSDF物理</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        着色有关的物理着色与光和物体相互作用发生的物理现象有关。为了更好的理解这些现象，需要先对光进行基本了解。
 
-光是电磁波，并且是横波（传播方向和振动方向垂直）。 光可以依靠波长来区分，光波长涉及的范围很广，但其中可见光大约是400-700 nm的狭小范围，只有这部分的光对着色有影响。
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
 
-折射率（refractive index）是一个复数，实数部分表示介质对光传播速度的影响，虚数部分决定光是否会被吸收（转变为其它能量）。折射率是波长的函数
-      
-      </p>
-      
-      <p>
-          <a href="/2016/03/04/BSDF物理/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
   
-  <nav class="pagination" role="pagination">
-    
-    <span class="page-number">Page 1 of 1</span>
-    
-  </nav>
-</main>
 
-
-  
-<footer class="site-footer">
-  
-  <div class="inner">
-     <section class="copyright">All content copyright <a href="/">gdRender</a> &copy; 2014 &bull; All rights reserved.</section>
-     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">gdRender</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-</footer>
+  <p class="site-subtitle">Record learning notes here.</p>
+</div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/js/index.js"></script>
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/BSDF数学/" itemprop="url">
+                  BSDF数学
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-03-04T12:15:33+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##着色有关的数学</p>
+<p>一般我们采用辐射度学来度量电磁波的辐射情况。</p>
+<p>存在很多的辐射有关的物理量用来描述表面上各个方向的光。</p>
+<p>我们仅仅考虑radiance这个物理量，radiance用来确定单一光线的大小。我们使用L来表示radiance，$L_i$表示表面入射光的radiance， $L_o$用来表示表面出射光的radiance。</p>
+<p>Radiance是一个光谱量，也就是说radiance是波长的函数。理论上讲，为了表示可见光的radiance，需要存储 连续光谱的分布（联系pbrt中的Spectrum类）。 尽管某些特定的应用中确实需要对光谱分布的大量采样值，然而在工业界（电影和游戏）渲染中，使用RGB替代就足够了。关于RGB和光谱分布的联系解释可以参考<em>Real-Time Rendering，3rd</em>。</p>
+<h3 id="BRDF"><a href="#BRDF" class="headerlink" title="BRDF"></a>BRDF</h3><p>通常假定着色可以局部处理（就像上面Figure 17中右上角的图片示意的那样）。 这种情况下，光在表面某一点处的情况仅仅取决于入射光和出射光方向（观察方向）。</p>
+<p>我们约定使用$\vec v$表示出射光方向的单位向量，$\vec l$表示入射光方向的单位向量（实际上是入射方向的反方向，因为让二者都朝向表面外侧）。</p>
+<p>BRDF（Bidirectional Reflectance Distribution Function）用来描述表面对光的“响应“（Response），而BRDF使用$f(\vec l,\vec v)$来表示。<br>每个方向向量可以使用2个参数来描述（$\theta,\phi$）。</p>
+<blockquote>
+<p>解释：每个点或者向量使用极坐标表示的话需要3个参数$\rho,\theta,\phi$,而这里由于是单位向量，因此长度为1，故使用2个参数就可以描述。</p>
+</blockquote>
+<p>故对于各向同性的BRDF（将l和v沿着法线n旋转，BRDF保持不变）需要3个参数（$\theta_i,\theta_o,\phi$,$phi是\vec l 和 \vec v 投影的夹角$）;<br>对于各向异性的BRDF，需要5个参数（$\theta_i,\theta_o,\phi,\phi_i,\phi_o$）。<br><img src="/img/1456405729101.png" alt="Alt text"></p>
+<p>实践中，计算给定BRDF需要的参数从1个到5个不等，常见的一些角见Figure 19：<br><img src="/img/1456405781843.png" alt="Alt text"></p>
+<p>原则上讲，BRDF要求light和view都在表面上方（BRDF仅仅处理表面的反射，透射依靠BTDF来描述或者BSDF（包含BRDF和BTDF）），也就是说，$\vec n \cdot \vec l 和 \vec n \cdot \vec v$ 都必须大于0。</p>
+<p>避免背向表面（指出射光和入射光不在平面一侧）的光的方法：仅考虑正向的入射光或者将背向光的贡献值设置为0。 理论上，背向光是不可能发生的，但是，由于顶点处法线会进行插值和法线映射（游戏中），这样就会导致背向光的发生。<br>简单的，可以将$\vec n \cdot \vec v$ 截取到0（若为负值的话）。</p>
+<p>有两种方法来直观的理解BRDF：</p>
+<ol>
+<li>给定某个方向的入射光，BRDF给出了该表面上  反射和散射光在所有出射光中的相对分布。</li>
+<li>给定一个观察方向，BRDF给出了每个入射光在给定出射光的相对分布。</li>
+</ol>
+<p>BRDF是光谱量（波长函数）。理论上，BRDF的输入输出都应该增加波长，而这会增加BRDF的维数。 然而，实践中，不同波长的光是不相干的（没有干涉），因此我们简单的任务BRDF是谱值的函数（即给BRDF乘以一个谱值）。 工业界的着色中，意味着一个用RGB值表示的BRDF乘以一个RGB 颜色值。</p>
+<p>BRDF在反射率方程（reflectance equation）中使用，而反射率方程是渲染方程（rendering equation）的特例：<br>    <img src="/img/1456407303592.png" alt="Alt text"></p>
+<p>它的含义十分明确： 输出的radiance等于入射radiance乘以BRDF再乘以一个cos项 在表面所有方向的积分。<br>上面公式中<img src="/img/1456407445251.png" alt="Alt text"> 代表两个向量（BRDF和radiance都是向量）逐分量相乘得到的向量（即(a,b,c)乘(d,e,f)得到（ad,be,cf））。</p>
+<p>还要注意的是，并不是所有关于入射光方向、出射光方向的函数都可以作为BRDF使用，它必须满足互易性（ Reciprocity）和能量守恒（Energy conservation）。</p>
+<ol>
+<li>互易性<br> <img src="/img/1456407745369.png" alt="Alt text"><br> 指的是交换l和v后值不变。</li>
+<li>能量守恒<br> <img src="/img/1456407760750.png" alt="Alt text"><br> 指反射的光的能量不可能超过100%的入射光能量。即对于任意的入射光方向l，BRDF乘以cos项的积分必须小于1。</li>
+</ol>
+<p>BRDF描述的物理现象包含两个不同的物理现象：</p>
+<ol>
+<li>表面反射：在BRDF中使用 specular 项来描述；</li>
+<li>次表面散射： 在BRDF中使用 diffuse项来描述。<br><img src="/img/1456407982009.png" alt="Alt text"></li>
+</ol>
+<p>下面将分别进行介绍。</p>
+<h3 id="u8868_u9762_u53CD_u5C04_uFF08_u955C_u9762_u53CD_u5C04_u9879_uFF09"><a href="#u8868_u9762_u53CD_u5C04_uFF08_u955C_u9762_u53CD_u5C04_u9879_uFF09" class="headerlink" title="表面反射（镜面反射项）"></a>表面反射（镜面反射项）</h3><p>基于物理的镜面反射BRDF项通常基于微平面理论。这个理论用来描述一般性的表面（非光滑）发生的反射。<br>微平面理论的基本假设是： 微分面元的大小比观察的尺度（比如着色分辨率）小，同时却比可见光波长大（因此可以直接使用几何光学而不需要考虑波的效应）。目前为止，微平面理论只适用于单反射的表面。</p>
+<p>由于前面假设中提到的微面元大于光波长，因此在表面每个点所在的微面元可以视为光滑的。而光滑平面上的入射光会分为反射光和折射光。</p>
+<p>表面每个点处，经由方向l入射的光都会反射到单一方向v（v取决于此处微分法线$\vec m$）。也就是说，对表面上所有点而言，只有满足从l入射并恰好发射到v方向的<strong>那些点</strong>才会对BRDF有贡献。</p>
+<p>下图中那些“朝向正确”的点处的表面法向量m都恰好在l和v的中央（l和v一半处的向量叫做半角向量，一般用$\vec h$表示）。<br><img src="/img/1456482313281.png" alt="Alt text"></p>
+<p>然而并非所有满足$\vec m = \vec h$的点都对最终的发射有贡献，其中一些会被其它微面元阻挡（阻挡入射方向的叫做阴影，阻挡出射方向的叫做遮蔽，或者二者均有）。微面元理论假定所有被遮挡的光线都消失掉（也就是忽略遮挡的光线）。虽然现实中由于多个平面间反射也会对最终结果有影响，但<strong>微平面间的相互反射在微平面理论中不做考虑</strong>。</p>
+<p>下图中展示了几种遮挡。最左侧的图中，入射方向l被阻挡，因此那部分区域在阴影中。中间的图中，出射方向v被阻挡，因此尽管反射发生了但无法被观察到。上述两种情况下，这些点不会对BRDF有贡献。 实际上，光会在不同区域间不断反射而最终对BRDF有贡献（最有图片所示）。而微平面间相互的反射在微平面理论中是不考虑的。<br><img src="/img/1456482675342.png" alt="Alt text"></p>
+<p>基于上述两点假设（局部光滑的微平面，微平面间不存在相互反射），则粗糙平面的镜面反射BRDF可推导为：<br><img src="/img/1456482938413.png" alt="Alt text"></p>
+<p>上述公式中, $D(\vec h) $是微平面的分布函数，它是关于半角向量的函数，也就是h代表朝向的平面的概率密度函数。 $G(\vec l,\vec v,\vec h)$是几何函数，代表对于指定的l和v方向，满足m=h的点中没有被遮挡的几率。 因此$D(\vec h) $ 和  $G(\vec l,\vec v,\vec h)$的乘积给了所有真正对BRDF有贡献的点的比例。 $F(\vec l,\vec h)$ 是菲涅尔反射率，它是入射方向l和表面法向量m（m=h）的函数，菲涅尔反射率告诉我们对于表面的每一个对BRDF有贡献的点处反射光占入射光的多少。最后，分母上的$4(\vec n \cdot \vec l)(\vec n \cdot \vec v)$是一个矫正项。</p>
+<h3 id="Fresnel__u53CD_u5C04"><a href="#Fresnel__u53CD_u5C04" class="headerlink" title="Fresnel 反射"></a>Fresnel 反射</h3><p>菲涅尔反射率计算在光滑平面上反射光的比率。</p>
+<p>Fresnel reflectance 的值取决于：</p>
+<ol>
+<li>入射角（入射光l和法向量的夹角）；</li>
+<li>材质的折射率。</li>
+</ol>
+<p>由于折射率是光谱的函数，故菲涅尔反射率也是一个光谱量（工业上，使用RGB元组代替）。当然菲涅尔反射率的取值范围是从0到1。</p>
+<p>完整的fresnel equation十分复杂，至少需要材质参数（在可见光谱上进行密集的复数折射率采样）。<br>我们可以通过观察fresnel 方程对不同实际材质的行为来推导一些更简单的参数表达形式。</p>
+<p>下图展示了一些物质的菲涅尔反射率曲线，纵坐标是菲涅尔反射率，横坐标是入射角。 由于铜和铝的菲涅尔反射率在可见光波段变换很大，因此分成RGB 3个分量来作图。铜的R分量曲线最高，然后是G，最后是B。铝则是B最高，然后G，最后是R。<br><img src="/img/1456485612852.png" alt="Alt text"></p>
+<p>尽管上面的图中的曲线区别都比较大，但是还是可以发现一些共同点： 在入射角为0度到45度的范围中菲涅尔折射率几乎是常数，而通常在45度到75度之间变化更快一些。而在75度和90度之间则飞快的增长到1。</p>
+<p>观察这些数据图像是大有裨益的。暂时抛开微平面理论，先来看一个简单的情况（光滑金属的反射），它会将入射光反射到理想反射光的方向，这个现象用BRDF很难以描述（需要使用δ函数描述），不过我们可以使用一个简单的模型来描述：从v方向采样入射的radiance，然后将它乘以fresnel reflectance就可以得到出射radiance。入射角通过v和n的夹角来计算（入射角和出射角是相等的）。</p>
+<p>Figure25展示了入射角（以及对应fresnel reflectance）在3D场景中的变化情况。我们发现绿色和黄色区域占主要部分，Fresnel reflectance在大多数可见光区段不怎么改变，只是在边缘处急剧改变。</p>
+<p>下图中，左侧就是Figure 24中的图。0-45度（绿色区域）函数值几乎是常数，45-75度变换会逐渐变化，75-90度非常快的变化到1。中间的图片展示了上述区域用3D对象来形象化描述（Fresnel reflectance关于（n,v）的关系）。右侧图片展示了玻璃的fresnel reflectance曲线（Figure 24中绿色曲线）的形象化展示。<br><img src="/img/1456488539557.png" alt="Alt text"></p>
+<p>微平面理论中，我们处理粗糙但微平面光滑的情况。因此我们表面上每个点处的Fresnel reflectance值，fresnel入射角是h和l夹角（也可以使用v和h的夹角，二者是一样的）。</p>
+<p>Figure 26 和 Figure25类似，只是关于h和l的函数。<img src="/img/1456489301980.png" alt="Alt text"><br>4幅图对应不同的l方向，我们发现对某些入射角来说，整个物体几乎都在黄色或者红色区域。然而从Figure 27中我们看到，这是一种误解（即在菲涅尔反射率项上乘以其它因子得到BRDF项后，红色区域重新限制在一定边界中）。</p>
+<p>Schlick给出F函数的一个简单却可行的近似公式：<br><img src="/img/1456489921055.png" alt="Alt text"><br>式中$F_0$代表角度为0时候的菲涅尔反射率。</p>
+<p>在微平面BRDF中使用的时候，用h来代替其中的n：<br><img src="/img/1456490042472.png" alt="Alt text"></p>
+<p>为了知道如何确定$F_0$的值，我们去看各种各样真实材质的表。表1中同时展示了线性空间和gamma空间的值。从表1中，我们可以看出以下几个事实：</p>
+<ol>
+<li>金属的$F_0$值显著大于非金属，即使是铁这样黑色的金属也在0度的时候反射超过50%。回顾之前提到的金属是没有次表面反射的，更亮的镜面反射分量以及没有diffuse分量是金属的视觉特点。<br>非金属中最亮的钻石在0度入射时也仅仅有17%的反射率，大多数的非金属物质比这个数值还要低得多。</li>
+<li>落在20%–40%的值非常少，而这些物质通常是一些半导体或者其它一些不太可能出现在着色中的材质。<br>同样，小于2%的数值也几乎没有。</li>
+<li>实际上，除了金属、宝石、水晶外，大多数物质的反射率集中在2%–5%的狭窄区域。<br><img src="/img/1456490234819.png" alt="Alt text"></li>
+</ol>
+<h3 id="u6CD5_u7EBF_u5206_u5E03_u51FD_u6570D_28_29"><a href="#u6CD5_u7EBF_u5206_u5E03_u51FD_u6570D_28_29" class="headerlink" title="法线分布函数D()"></a>法线分布函数D()</h3><p>大多数表面的微平面在不同朝向并不是均匀分布的。更多的微平面朝向靠近宏观表面的法向量n的方向（而在远离n的方向相对稀少）。这个微平面朝向的统计分布通过D(m)来描述。</p>
+<blockquote>
+<p>整个宏观平面的法向量为<strong>n</strong>，更多的微平面朝向n的方向（即与n垂直）</p>
+</blockquote>
+<p>D()和F()函数不同：</p>
+<ol>
+<li>D的函数值范围并不局限在0到1之间，仅仅要求非负即可（比如法向量指向某个特定方向的微平面可能特别多）。</li>
+<li>D的函数值不是光谱值（即不是RGB元组表示），而是标量。</li>
+</ol>
+<p>D()决定了镜面反射项的大小、亮度以及形状。许多D()函数都采用类高斯分布。</p>
+<p>当平面粗糙程序降低的时候，微平面法线集中在宏观表面法向量n周围的情况就会增加，相应的D(m)的值提高。 Walter讨论了分布函数的几种归一化方法。 </p>
+<h3 id="u51E0_u4F55_u51FD_u6570G_28_29"><a href="#u51E0_u4F55_u51FD_u6570G_28_29" class="headerlink" title="几何函数G()"></a>几何函数G()</h3><p>G(l,v,h) 表示一个微平面法向量为m的点 在入射光为l出射光为v的情况下不被遮挡的概率。</p>
+<p>在BRDF微平面模型中，上述m用h代替。</p>
+<p>G()函数的值在0-1之间。类似D()函数，G()函数也存在多种近似表达式。</p>
+<p>为了能量守恒，G()在BRDF的公式中是必须的（否则会出现反射光多于入射光的情况）。</p>
+<p>BRDF公式的推导中，非常关键的部分在于  active表面面积（对l入射v出射有贡献的区域）和total表面面积（宏观表面上）的比值。也就是说要考虑遮挡和阴影，如果不考虑就会导致active area 面积超过total area，而这在物理上是显然不可能的（会导致能量不守恒）。</p>
+<p>Figure 28 上面的图中，宏观平坦的表面使用绿色直线，而凹凸不平的微表面使用黑色线表示。满足m=h的区域用红色标注。 左上角的绿色线代表宏观平面在v方向的投影（垂直于v方向，v是图中央的紫色箭头），而红色区域的投影用左上角的红色线表示。最左上角的红线和绿线代表它们各自的和。可以发现，投影后的active微平面总面积大于宏观平面投影后的面积。这是不合理的，会导致BRDF反射超过入射。<br>下面的图片中的红色线则仅表示满足m=h中可见的部分（去掉阴影和遮挡），此时active微平面投影面积小于宏观平面投影面积。<br>当v的方向更水平的时候，差别更加明显。此时不考虑阴影和遮挡的情况下，宏观平面的投影面积几乎为0，因此红色线比绿色线远大（v完全水平的话，二者比值将是无穷大）。<br><img src="/img/1456492541334.png" alt="Alt text"></p>
+<h3 id="u5FAE_u5E73_u9762_u6A21_u578B_u7684_u5C40_u9650_u6027"><a href="#u5FAE_u5E73_u9762_u6A21_u578B_u7684_u5C40_u9650_u6027" class="headerlink" title="微平面模型的局限性"></a>微平面模型的局限性</h3><p>上述微平面理论的公式十分强大并且容易扩展。通过改变参数（镜面反射颜色、微平面分布的粗糙程度等）或者通过改变D() G()函数的表达式 可以得到各种各样不同的材质。</p>
+<p>然而，必须指出，有几种现象并没有包含在上述模型中。<br>微平面模型没有考虑波动光学的影响（比如衍射和干涉）。一般实践中这通常不是大问题（因为在工业渲染中这些现象一般不出现）。<br>另一方面，微平面模型基于几个受限的前提条件。例如D()函数的定义假设微平面朝向的分布不随观察方向改变而改变，这等价于假设微分高度和朝向无关。在某些粒子中，这是不成立的。比方说，一个原本均匀粗糙的表面，凸起的部分进行磨光处理，当我们的视线较为水平的时候，只有凸起的地方的反射才可以看到，此时表面要比其它角度去看光滑许多。</p>
+<p>Figure29中 所示的平面高度和朝向有着很强的联系（凸起部分光滑，低洼地区粗糙）。<br>上面的图片中，入射光大多和法线方向接近，大多数光进入低洼区并反射到很多方向。下面的图片中，入射光方向更加水平，大多数光从光滑的地方反射。<br>这就导致D()函数和观察角度有很强的联系。<br><img src="/img/1456557483268.png" alt="Alt text"></p>
+<p>近期的一些研究中提出一些改进方案来修正前面提到的问题，但仍需要进一步的研究。尽管微平面模型可能以后会被基于理论的反射模型代替，不过目前来看仍然是最好理解并且应用最为成功的模型。因此，接下来的讨论都是在微平面模型基础上。</p>
+<h3 id="u6B21_u8868_u9762_u53CD_u5C04_u7387_uFF08_u6F2B_u53CD_u5C04_u9879_uFF09"><a href="#u6B21_u8868_u9762_u53CD_u5C04_u7387_uFF08_u6F2B_u53CD_u5C04_u9879_uFF09" class="headerlink" title="次表面反射率（漫反射项）"></a>次表面反射率（漫反射项）</h3><p>对于次表面的反射而言有多种模型：</p>
+<ul>
+<li>Lambert模型是其中最简单且使用最广泛的模型。Lambert BRDF是一个常数：<br>  <img src="/img/1456557941511.png" alt="Alt text"><br>式子中，$c_{diff}$是光中漫反射所占的比例。</li>
+</ul>
+<p>另外一些漫反射模型不同于Lambert，这些模型会考虑diffuse和specular的能量守恒。 那些没有直接在平面上反射的光才会进行次平面反射，从fresnel反射推导中我们知道specular项在观察角度比较水平的时候会增加，因此diffuse项就应该减少。有多种模型来模拟这一现象，从简单（乘以1-Fresnel因子）到复杂。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/BSDF物理/" itemprop="url">
+                  BSDF物理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-03-04T12:12:48+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="u7740_u8272_u6709_u5173_u7684_u7269_u7406"><a href="#u7740_u8272_u6709_u5173_u7684_u7269_u7406" class="headerlink" title="着色有关的物理"></a>着色有关的物理</h2><p>着色与光和物体相互作用发生的物理现象有关。为了更好的理解这些现象，需要先对光进行基本了解。</p>
+<p><img src="/img/1456381017012.png" alt="Alt text"></p>
+<p>光是电磁波，并且是横波（传播方向和振动方向垂直）。 光可以依靠波长来区分，光波长涉及的范围很广，但其中可见光大约是400-700 nm的狭小范围，只有这部分的光对着色有影响。</p>
+<p><img src="/img/1456381341571.png" alt="Alt text"></p>
+<p>折射率（refractive index）是一个复数，实数部分表示介质对光传播速度的影响，虚数部分决定光是否会被吸收（转变为其它能量）。折射率是波长的函数。</p>
+<h3 id="u5747_u5300_u4ECB_u8D28"><a href="#u5747_u5300_u4ECB_u8D28" class="headerlink" title="均匀介质"></a>均匀介质</h3><p>最简单的光-物体相互作用是光在均匀介质中的传播。均匀介质是在一定区域内折射率保持恒定。</p>
+<p>透明介质是可见光部分对应的折射率非常小。也就是说光线穿过没有明显的吸收，而是保持不变以直线穿过。 常见的透明介质包括水和玻璃。<br><img src="/img/1456381883197.png" alt="Alt text"></p>
+<p>如果介质对可见光部分存在明显<strong>吸收</strong>，那么传播长度越长，吸收越多。 但是传播的方向并不会改变，仅仅改变强度（如果仅仅吸收可见光的一部分，那么强度就等于颜色改变）。<br><img src="/img/1456381869130.png" alt="Alt text"></p>
+<p><strong>注意</strong>，如果传播长度非常长，即使微小的吸收也会造成强度改变（或者颜色改变）。例如：水严格意义上会吸收一部分可见光（特别是波长较长的红色波段），在深海处就会体现出来（变蓝）。<br><img src="/img/1456382039967.png" alt="Alt text"></p>
+<h3 id="u6563_u5C04"><a href="#u6563_u5C04" class="headerlink" title="散射"></a>散射</h3><p>均匀介质中，光总是沿直线传播不改变方向（尽管由于吸收作用会降低强度）。<br>而非均匀介质（heterogeneous medium）拥有随空间位置而变化的折射率。<br>其中，若折射率急剧的发生改变（急剧指的是微小的空间距离内）则会发生<strong>散射</strong>，即光线分裂成个方向来传播（散射不改变光的能量）。</p>
+<p>微观粒子各自包含一定的区域（在此区域内它的折射率和周围环境不同），会导致入射光从各种方向散射出去。<br><img src="/img/1456394451979.png" alt="Alt text"><br>而散射光分布并不是均一的，而是和具体的粒子有关。某些粒子导致forward scattering（更多的光从前方散射）或 back scattering（更多的光从原方向的反方向散射出去），而另一些粒子会导致散射沿某个小区域散射（比如理想镜面反射用δ分布函数描述）。<br>    混沌介质的散射光密度分布在其传播的一个方向上是随机的（即随机散布，但局限于一定的方向区域）。<br>    <img src="/img/1456394912519.png" alt="Alt text"><br>    而光在半透明或者完全不透明的介质中的散射可以认为是完全随机的（整个空间范围）。<br>    <img src="/img/1456394972431.png" alt="Alt text"><br>    <strong>注意</strong>，类似于吸收的情况，微小的散射在很长的距离下也会有明显影响，比如晴朗的天空也会有散射效果。<br>    <img src="/img/1456395213177.png" alt="Alt text"></p>
+<h3 id="u4ECB_u8D28_u5916_u89C2"><a href="#u4ECB_u8D28_u5916_u89C2" class="headerlink" title="介质外观"></a>介质外观</h3><p>之前的部分介绍了光和物体的两种相互作用（吸收和散射）。复数折射率的区域会导致吸收（降低强度，若只吸收可见光区段的部分波长的光则会导致颜色改变，但是光的方向不变）。 而折射率快速改变的区域导致散射（光传播方向变为多个方向，但光的总能量不变）。</p>
+<p>还有第三种相互作用：<strong>发射</strong>（emission），代表传播过程中其它能量转变为光能（和吸收恰好相对），这个过程通常在光源处发送，但是在着色过程中并不是频繁出现的过程。<br>下图示意了吸收、散射、发射三种效果：<br><img src="/img/1456395807132.png" alt="Alt text"></p>
+<p>大多数真实的介质同时具有某种程度的吸收和散射效果。介质的外观取决于散射和吸收的相对比例。下图展示了散射和吸收的不同组合：<br><img src="/img/1456396008493.png" alt="Alt text"></p>
+<h3 id="u5149_u6ED1_u5E73_u9762_u6563_u5C04"><a href="#u5149_u6ED1_u5E73_u9762_u6563_u5C04" class="headerlink" title="光滑平面散射"></a>光滑平面散射</h3><p>麦克斯韦方程揭示了折射率改变时光发生的变化，然而大多数情况下并不存在解析解。下面的特例情况下存在解，而这种情况和着色密切相关。</p>
+<p>这种特例情况是指无限大、完全平坦的平面分隔了两个具有不同折射率的区域。例如：空气和其它介质就适用于这种情况。这种特例情况下麦克斯韦方程的解叫做菲涅尔方程（Fresnel equation）。<br><img src="/img/1456396705734.png" alt="Alt text"></p>
+<p>下面是菲涅尔方程揭示的内容：</p>
+<blockquote>
+<p>上图中，入射角为$\theta_i$,反射角为$\theta_r$,而折射角为$\theta_t$，入射光所在介质折射率为$\eta_1$,$\eta_2$则满足：<br>$$\theta_i = \theta_r$$<br>$$\frac{sin\theta_i}{sin\theta_t} = \frac{\eta_2}{\eta_1}$$</p>
+<p>反射比与入射光的偏振有关，分为s偏振和p偏振：<br><img src="/img/1456397272344.png" alt="Alt text"><br><img src="/img/1456397279263.png" alt="Alt text"><br>特别的，若入射光无偏振（s偏振=p偏振），则反射比R为$R=\frac{R_s+R_p}{2}$<br>而透射比T永远满足：$T=1-R$</p>
+</blockquote>
+<p>尽管真实存在的物体表面不可能无限大，但和光波长相比可以认为足够大了。“完全平滑“严格而言也是不可能的（考虑表面原子的小凸起）。我们可以制作纳米级的光滑的表面，通常这些用于高质量的光学仪器，比如天文望远镜等。</p>
+<h3 id="u975E_u5149_u6ED1_u5E73_u9762"><a href="#u975E_u5149_u6ED1_u5E73_u9762" class="headerlink" title="非光滑平面"></a>非光滑平面</h3><p>当然，通常所见的表面不会抛光到天文望远镜的级别。当表面并非完全平滑的时候会发生什么呢？大多数情况下，微表面比光波长大的多，不过仍然小到无法看到或者无法直接渲染（比如它小于一个像素覆盖的区域或者小于一个着色采样）。<br>这种情况下，表面可以通过大量微小的可以视为光滑的微平面组成。而表面的外观是这些微平面散射结果的聚集结果。<br><img src="/img/1456398358456.png" alt="Alt text"></p>
+<p>微平面尺度上，表面越粗糙，反射越模糊，也就是说反射方向偏移人眼方向越多。为了着色方便，通常采用统计的方式来看待这种微分几何性质，并在每个点在多个方向进行反射光、折射光的查看。</p>
+<p>下图中的两个表面在人眼的宏观尺度上都是光滑的，粗糙指的是微平面结果方面。<br><img src="/img/1456398645793.png" alt="Alt text"></p>
+<h3 id="u6B21_u8868_u9762_u6563_u5C04"><a href="#u6B21_u8868_u9762_u6563_u5C04" class="headerlink" title="次表面散射"></a>次表面散射</h3><p>有一个问题，折射光线会发生什么？这取决于物体的结构。 </p>
+<p>对于金属而言，折射光立即被吸收（金属在可见光波段具有很高的吸收系数（即上面提高的折射率的虚部）），本质上讲，折射光的能量快速被金属中自由电子所吸收。</p>
+<p>对于非金属物质（也就是绝缘体）而言，会和下层的子表面继续进行前面几节所述的折射和反射。而大多数情况下，一部分折射光足够重新从表面中发射出去。</p>
+<p>下图左边代表金属，其中的自由电子会立即吸收折射光的能量；<br>而右边所示的绝缘体物质，则会继续不停的散射 折射光直至它重新从平面发射出去（也会被吸收一部分能量）。下图可以看出绝缘体物质的次表面散射中散射光从不同的点发出，并且距离表面有不同的距离。<br><img src="/img/1456399074461.png" alt="Alt text"></p>
+<p>下图展示了在介质中穿行的距离和像素大小之间的关系。<br>左上角的图中，像素（红边的绿色圆盘）远大于次表面中穿行的距离，这种情况下忽略掉在表面下穿行的距离，将次表面散射假定进入和射出的点在同一点处（右上角的示意图）。这种情况下，着色仅仅是一个局部的过程，某点处的出射光仅仅取决于该点处的入射光。<br>而下边的图中像素比穿行距离小，这种情况下，每个点处的着色受其它点处光散射的影响。这种情况下，需要使用“次表面散射”技术。</p>
+<p>需要注意的是，上述两种情况实际上是完全一样的，区别仅仅在于散射距离和观测的尺度问题。</p>
+<p>这告诉我们，通常展示“subsurface sacttering”的材质在很大距离的情况下也可以使用“regular diffuse shading”（例如非常远的人物的皮肤）；而通常展示“regular diffuse shading”的材质如果观察很近的情况下也必须考虑“subsurface scattering‘’（例如非常近距离的观察塑料玩具）。<br><img src="/img/1456399280689.png" alt="Alt text"></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Duan Gao" />
+          <p class="site-author-name" itemprop="name">Duan Gao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Duan Gao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
 
 
 
 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
 
 
 
