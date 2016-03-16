@@ -57,7 +57,7 @@
 <blockquote>
 <p>解释：每个点或者向量使用极坐标表示的话需要3个参数$\rho,\theta,\phi$,而这里由于是单位向量，因此长度为1，故使用2个参数就可以描述。</p>
 </blockquote>
-<p>故对于各向同性的BRDF（将l和v沿着法线n旋转，BRDF保持不变）需要3个参数（$\theta_i,\theta_o,\phi$,$phi是\vec l 和 \vec v 投影的夹角$）;<br>对于各向异性的BRDF，需要5个参数（$\theta_i,\theta_o,\phi,\phi_i,\phi_o$）。<br><img src="/../../../../img/1456405729101.png" alt="Alt text"></p>
+<p>故对于各向同性的BRDF（将l和v沿着法线n旋转，BRDF保持不变）需要3个参数（$\theta_i,\theta_o,\phi$,$phi是\vec l 和 \vec v 投影的夹角$）;<br>对于各向异性的BRDF，需要5个参数（$\theta_i,\theta_o,\phi,\phi_i,\phi_o$）。<br><img src="/img/1456405729101.png" alt="Alt text"></p>
 <p>实践中，计算给定BRDF需要的参数从1个到5个不等，常见的一些角见Figure 19：<br><img src="/./1456405781843.png" alt="Alt text"></p>
 <p>原则上讲，BRDF要求light和view都在表面上方（BRDF仅仅处理表面的反射，透射依靠BTDF来描述或者BSDF（包含BRDF和BTDF）），也就是说，$\vec n \cdot \vec l 和 \vec n \cdot \vec v$ 都必须大于0。</p>
 <p>避免背向表面（指出射光和入射光不在平面一侧）的光的方法：仅考虑正向的入射光或者将背向光的贡献值设置为0。 理论上，背向光是不可能发生的，但是，由于顶点处法线会进行插值和法线映射（游戏中），这样就会导致背向光的发生。<br>简单的，可以将$\vec n \cdot \vec v$ 截取到0（若为负值的话）。</p>
@@ -67,8 +67,8 @@
 <li>给定一个观察方向，BRDF给出了每个入射光在给定出射光的相对分布。</li>
 </ol>
 <p>BRDF是光谱量（波长函数）。理论上，BRDF的输入输出都应该增加波长，而这会增加BRDF的维数。 然而，实践中，不同波长的光是不相干的（没有干涉），因此我们简单的任务BRDF是谱值的函数（即给BRDF乘以一个谱值）。 工业界的着色中，意味着一个用RGB值表示的BRDF乘以一个RGB 颜色值。</p>
-<p>BRDF在反射率方程（reflectance equation）中使用，而反射率方程是渲染方程（rendering equation）的特例：<br>    <img src="/./1456407303592.png" alt="Alt text"></p>
-<p>它的含义十分明确： 输出的radiance等于入射radiance乘以BRDF再乘以一个cos项 在表面所有方向的积分。<br>上面公式中<img src="/./1456407445251.png" alt="Alt text"> 代表两个向量（BRDF和radiance都是向量）逐分量相乘得到的向量（即(a,b,c)乘(d,e,f)得到（ad,be,cf））。</p>
+<p>BRDF在反射率方程（reflectance equation）中使用，而反射率方程是渲染方程（rendering equation）的特例：<br>    <img src="/img/1456407303592.png" alt="Alt text"></p>
+<p>它的含义十分明确： 输出的radiance等于入射radiance乘以BRDF再乘以一个cos项 在表面所有方向的积分。<br>上面公式中<img src="/img/1456407445251.png" alt="Alt text"> 代表两个向量（BRDF和radiance都是向量）逐分量相乘得到的向量（即(a,b,c)乘(d,e,f)得到（ad,be,cf））。</p>
 <p>还要注意的是，并不是所有关于入射光方向、出射光方向的函数都可以作为BRDF使用，它必须满足互易性（ Reciprocity）和能量守恒（Energy conservation）。</p>
 <ol>
 <li>互易性<br> <img src="/./1456407745369.png" alt="Alt text"><br> 指的是交换l和v后值不变。</li>
